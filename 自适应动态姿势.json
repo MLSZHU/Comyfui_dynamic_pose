@@ -1,0 +1,969 @@
+{
+  "last_node_id": 61,
+  "last_link_id": 50,
+  "nodes": [
+    {
+      "id": 36,
+      "type": "DF_Image_scale_to_side",
+      "pos": [
+        -164.6666073531251,
+        73.08541591876983
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "side_length",
+          "type": "INT",
+          "link": 18,
+          "widget": {
+            "name": "side_length"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25,
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Image_scale_to_side"
+      },
+      "widgets_values": [
+        1,
+        "Width",
+        "nearest-exact",
+        "disabled"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "DF_Get_image_size",
+      "pos": [
+        -126.6666073531251,
+        578.0854159187697
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Get_image_size"
+      }
+    },
+    {
+      "id": 37,
+      "type": "DF_Image_scale_to_side",
+      "pos": [
+        -182.6666073531251,
+        384.0854159187698
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "side_length",
+          "type": "INT",
+          "link": 20,
+          "widget": {
+            "name": "side_length"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26,
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Image_scale_to_side"
+      },
+      "widgets_values": [
+        1,
+        "Height",
+        "nearest-exact",
+        "disabled"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -483.66660735312473,
+        79.08541591876983
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 30,
+      "type": "DF_Get_latent_size",
+      "pos": [
+        -499.6666073531248,
+        286.0854159187698
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": [
+            18,
+            21,
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": [
+            20,
+            22,
+            37
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Get_latent_size"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 40,
+      "type": "EmptyImage",
+      "pos": [
+        -500.6666073531248,
+        472.0854159187698
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 21,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 22,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28,
+            31
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1,
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "type": "DF_Get_image_size",
+      "pos": [
+        -112.6666073531251,
+        241.08541591876974
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": [
+            36
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DF_Get_image_size"
+      }
+    },
+    {
+      "id": 47,
+      "type": "CR Overlay Transparent Image",
+      "pos": [
+        161.33339264687496,
+        74.08541591876983
+      ],
+      "size": [
+        260.3999938964844,
+        224.94936284728982
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "back_image",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "overlay_image",
+          "type": "IMAGE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            34,
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Overlay Transparent Image"
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 48,
+      "type": "CR Overlay Transparent Image",
+      "pos": [
+        158.33339264687496,
+        391.0854159187698
+      ],
+      "size": [
+        260.3999938964844,
+        237.31459674804648
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "back_image",
+          "type": "IMAGE",
+          "link": 31
+        },
+        {
+          "name": "overlay_image",
+          "type": "IMAGE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35,
+            50
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Overlay Transparent Image"
+      },
+      "widgets_values": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 50,
+      "type": "PreviewImage",
+      "pos": [
+        432.3333926468751,
+        379.0854159187698
+      ],
+      "size": [
+        247.41449979614208,
+        275.62993241760205
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 49,
+      "type": "PreviewImage",
+      "pos": [
+        433.3333926468751,
+        70.08541591876983
+      ],
+      "size": [
+        244.26708759765575,
+        265.74895241760225
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 53,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        716.3333926468752,
+        87.08541591876983
+      ],
+      "size": {
+        "0": 210,
+        "1": 116
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 36
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 37
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "a-b"
+      ]
+    },
+    {
+      "id": 54,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        722.3333926468752,
+        261.0854159187698
+      ],
+      "size": {
+        "0": 210,
+        "1": 116
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 39
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 40
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "a-b"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "If ANY execute A else B",
+      "pos": [
+        722.3333926468752,
+        438.0854159187698
+      ],
+      "size": {
+        "0": 210,
+        "1": 66
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ANY",
+          "type": "*",
+          "link": 47
+        },
+        {
+          "name": "IF_TRUE",
+          "type": "*",
+          "link": 49
+        },
+        {
+          "name": "IF_FALSE",
+          "type": "*",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "?",
+          "type": "*",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "If ANY execute A else B"
+      }
+    },
+    {
+      "id": 24,
+      "type": "LoadImage",
+      "pos": [
+        967.3333926468752,
+        52.085415918769804
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23,
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "OIP-C.jfif",
+        "image"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "ImpactCompare",
+      "pos": [
+        694.3333926468752,
+        566.0854159187697
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 41
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            47
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactCompare"
+      },
+      "widgets_values": [
+        "a < b"
+      ]
+    },
+    {
+      "id": 61,
+      "type": "PreviewImage",
+      "pos": [
+        1019.3333926468752,
+        418.0854159187698
+      ],
+      "size": [
+        259.5239918359366,
+        240.92465988769504
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 48
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    }
+  ],
+  "links": [
+    [
+      16,
+      10,
+      0,
+      30,
+      0,
+      "LATENT"
+    ],
+    [
+      18,
+      30,
+      0,
+      36,
+      1,
+      "INT"
+    ],
+    [
+      20,
+      30,
+      1,
+      37,
+      1,
+      "INT"
+    ],
+    [
+      21,
+      30,
+      0,
+      40,
+      0,
+      "INT"
+    ],
+    [
+      22,
+      30,
+      1,
+      40,
+      1,
+      "INT"
+    ],
+    [
+      23,
+      24,
+      0,
+      36,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      24,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      36,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      37,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      36,
+      0,
+      47,
+      1,
+      "IMAGE"
+    ],
+    [
+      28,
+      40,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      37,
+      0,
+      48,
+      1,
+      "IMAGE"
+    ],
+    [
+      31,
+      40,
+      0,
+      48,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      47,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      35,
+      48,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      41,
+      1,
+      53,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      37,
+      30,
+      1,
+      53,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      39,
+      42,
+      0,
+      54,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      40,
+      30,
+      0,
+      54,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      41,
+      53,
+      0,
+      46,
+      0,
+      "*"
+    ],
+    [
+      42,
+      54,
+      0,
+      46,
+      1,
+      "INT"
+    ],
+    [
+      47,
+      46,
+      0,
+      60,
+      0,
+      "*"
+    ],
+    [
+      48,
+      60,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      49,
+      47,
+      0,
+      60,
+      1,
+      "*"
+    ],
+    [
+      50,
+      48,
+      0,
+      60,
+      2,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Group",
+      "bounding": [
+        -516,
+        4,
+        1842,
+        700
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workspace_info": {
+      "id": "UHAbpDZ6goxJCo0xp9rXM"
+    }
+  },
+  "version": 0.4
+}
